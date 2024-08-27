@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1>Encriptador de Texto</h1>
+    </header>
+    <main class="container">
+        <section class="left-panel">
+            <textarea placeholder="Introduce el texto aquí"></textarea>
+            <div class="options">
+                <label for="key">Clave:</label>
+                <input type="text" id="key" name="key" placeholder="Introduce la clave">
+            </div>
+            <div class="buttons">
+                <button class="encrypt-btn">Encriptar</button>
+                <button class="decrypt-btn">Desencriptar</button>
+            </div>
+        </section>
+          
+        <aside >
+            <div class="right-panel">
+            <!-- Placeholder for ilustracion -->
+                <img src="ilustracion.png" alt="Ilustración"class="ilustracion">
+
+                    <div class="loader hidden"></div>
+
+                    <div id="output-text"  class="output-text">
+                        
+                            <h3 class="subtitulo">Ningun mensaje fue encontrado</h3>
+                            <p class="parrafo">Ingrese texto a encriptar o desencriptar</p>
+                            
+                    </div>
+                </div>
+                    <div class="buttons">
+                        <button class="copy-btn">Copiar</button>
+                        <button class="clear-btn">Limpiar</button> <!-- Nuevo botón de limpiar -->
+                    </div>
+                    
+        </aside>
+        
+        
+
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="https://instagram.com/tuusuario" target="_blank">Instagram</a>
+                <a href="https://facebook.com/tuusuario" target="_blank">Facebook</a>
+                <a href="https://telegram.me/tuusuario" target="_blank">Telegram</a>
+                <a href="https://linkedin.com/in/tuusuario" target="_blank">LinkedIn</a>
+            </div>
+            <div class="footer-credits">
+                <p>&copy; Copyright 2024 - Desarrollado por Alberto Sánchez</p>
+            </div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

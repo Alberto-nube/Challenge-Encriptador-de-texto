@@ -1,0 +1,290 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #003b73; /* Azul oscuro */
+    --secondary-color: #f4f5fa; /* Gris claro */
+    --accent-color: #d1d5db; /* Gris medio */
+    --text-color: #003b73; /* Azul oscuro */
+    --text-secondary-color: #6b7280; /* Gris oscuro */
+    --background-color: #F3F5FC; /* Nuevo color de fondo para el body y paneles */
+    --white-color: #ffffff; /* Blanco */
+    --black-transparent-color: rgba(0, 0, 0, 0.1); /* Negro transparente */
+    --font-family: 'Inter', sans-serif;
+    --font-size-default: 16px;
+    --font-size-title: 36px; /* Incrementado en un 50% */
+    --font-size-small: 14px;
+    --header-logo-size: 200px; /* Aumento del tamaño del logo en un 50% */
+    --clear-btn-bg-color: #e63946; /* Rojo para el botón de limpiar */
+    --clear-btn-border-color: #d62839; /* Borde rojo */
+    --clear-btn-hover-bg-color: #d62839; /* Rojo oscuro para el hover */
+    --clear-btn-hover-border-color: #d62839; /* Borde rojo oscuro para el hover */
+}
+
+html, body {
+    height: 100%;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--background-color); /* Color de fondo del body */
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+header {
+    background-color: var(--white-color);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid var(--primary-color); /* Línea azul entre header y main */
+}
+
+header .logo {
+    width: var(--header-logo-size); /* Asegúrate de que esta variable tenga el valor correcto */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 20px;
+
+}
+
+header h1 {
+    font-size: var(--font-size-title);
+    flex: 1; /* Permite al título ocupar el espacio restante */
+    text-align: center; /* Centra el título horizontalmente */
+}
+
+main.container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    height: calc(100% - 120px); /* Ajuste para ocupar todo el viewport menos el header y footer */
+}
+
+section.left-panel, aside {
+    width: 50%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color); /* Color de fondo igual al del body */
+    color: var(--text-color);
+    box-sizing: border-box;
+    /* border: 1px solid var(--accent-color); /* Borde visible */
+}
+
+textarea {
+    width: 100%;
+    height: calc(100% - 40px); /* Ajuste para que textarea ocupe toda la altura disponible */
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+    font-size: var(--font-size-default);
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.options {
+    margin-bottom: 20px;
+    font-size: var(--font-size-small);
+}
+
+.buttons {
+    display: flex;
+    gap: 50px;
+    justify-content: center; /* Centra horizontalmente los botones */
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: var(--font-size-default);
+    cursor: pointer;
+}
+
+.encrypt-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.decrypt-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 1px solid var(--accent-color);
+}
+
+.copy-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    margin-top: 20px;
+}
+
+.clear-btn {
+    background-color: var(--clear-btn-bg-color); /* Variable para el color de fondo */
+    color: var(--white-color);
+    border: 1px solid var(--clear-btn-border-color); /* Variable para el color del borde */
+    margin-top: 20px;
+}
+
+.clear-btn:hover {
+    background-color: var(--clear-btn-hover-bg-color); /* Variable para el color de fondo al pasar el ratón */
+    border-color: var(--clear-btn-hover-border-color); /* Variable para el color del borde al pasar el ratón */
+}
+
+
+
+
+.ilustracion {
+    max-width: 100%; /* Asegura que la ilustración no exceda el ancho del contenedor */
+    max-height: 100%; /* Asegura que la ilustración no exceda la altura del contenedor */
+    object-fit: contain; /* Mantiene las proporciones de la ilustración */
+    padding: 10px;
+    
+    box-sizing: border-box;
+    background-color: var(--white-color); /* Color de fondo de la ilustración */
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+/*.message-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.message-description {
+    font-size: var(--font-size-small);
+    color: var(--text-secondary-color);
+}
+
+#output-text {
+    font-size: var(--font-size-default);
+    color: var(--text-color);
+    word-wrap: break-word;
+    margin-top: 20px;
+    
+}
+*/
+.right-panel{
+    width: 100%;
+    height: calc(100% - 40px); /* Ajuste para que textarea ocupe toda la altura disponible */
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--accent-color);
+    font-size: var(--font-size-default);
+    resize: none;
+    margin-bottom: 20px;
+    background-color: var(--white-color);
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    flex-direction: column; /* Asegura que el contenido dentro del panel esté en columna */
+    box-sizing: border-box;
+}
+
+
+
+.output-text{
+    background-color: var(--white-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 400px;
+    width: 100%;
+    overflow: auto;
+}
+
+.loader {
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 15px;
+    animation: l1 1s linear infinite alternate;
+
+}
+.loader:before {
+    content:"Loading..."
+}
+@keyframes l1 {to{opacity: 0}}
+
+
+
+.subtitulo{
+    font-weight: 700;
+    text-align: center;
+}
+
+.parrafo{
+    
+    font-weight: 400;
+    text-align: center;
+    margin: 10px;
+}
+.hidden{
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 768px){
+    main{
+        flex-direction: column;
+    }
+    .contenedor{
+        justify-content: center;
+    }
+    .resultado{
+        height: auto;
+        max-width: 624px;
+        margin-top: 2rem;
+        min-height: 180px;
+    }
+    .imagen{
+        display: none;
+    }
+}
+
+
+
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 20px 0; /* Espacio aumentado para mejorar la separación */
+    font-size: var(--font-size-small);
+    border-top: 1px solid var(--accent-color); /* Borde superior para separación visual */
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Espacio entre elementos */
+}
+
+footer nav {
+    display: flex;
+    gap: 15px; /* Espacio entre los links */
+}
+
+footer nav a {
+    color: var(--white-color);
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin: 0;
+}
